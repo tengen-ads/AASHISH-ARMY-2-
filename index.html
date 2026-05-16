@@ -1,276 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VIP Group </title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1746298506727555');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1746298506727555&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP MEMBERS ONLY </title>
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at top, #2b0000 0%, #070707 60%, #000000 100%);
-      overflow: hidden;
-      padding: 20px;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .bg-glow {
-      position: absolute;
-      width: 450px;
-      height: 450px;
-      background: radial-gradient(circle, rgba(0,255,100,0.25) 0%, transparent 70%);
-      bottom: -120px;
-      right: -120px;
-      filter: blur(60px);
-    }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #0a0a0a, #000814 70%);
+  font-family: Arial, sans-serif;
+  color: white;
+}
 
-    .card {
-      position: relative;
-      width: 100%;
-      max-width: 390px;
-      background: #0b0b0b;
-      border-radius: 28px;
-      padding: 35px 25px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: 0 0 40px rgba(0,0,0,0.6);
-      z-index: 2;
-    }
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 20px;
+}
 
-    .title {
-      color: #ff3131;
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 28px;
-    }
+h1 {
+  font-size: 30px;
+  color: #ffcc66;
+  text-shadow: 0 0 20px rgba(255,204,102,0.8);
+  margin-bottom: 10px;
+}
 
-    .profile-wrap {
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      margin: auto;
-      padding: 6px;
-      background: linear-gradient(135deg, #00ff66, #00ff95);
-      box-shadow: 0 0 30px rgba(0,255,128,0.5);
-    }
+.subtitle {
+  color: #b0bec5;
+  line-height: 1.5;
+}
 
-    .profile {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-    }
+.online {
+  margin: 15px 0;
+  color: #00ff9c;
+  font-weight: bold;
+}
 
-    .sub-title {
-      margin-top: 28px;
-      color: #00ff66;
-      font-size: 25px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
 
-    .timer {
-      margin-top: 18px;
-      color: #ff3131;
-      font-size: 72px;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
+.badge {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #ddd;
+}
 
-    .live-box {
-      margin-top: 14px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      color: white;
-      font-size: 20px;
-      flex-wrap: wrap;
-    }
+.join-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 40px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background: linear-gradient(90deg, #ffcc33, #ff9900);
+  box-shadow: 0 0 25px rgba(255,170,0,0.8);
+  margin-top: 20px;
+  cursor: pointer;
+}
 
-    .dot {
-      width: 18px;
-      height: 18px;
-      background: #ff3131;
-      border-radius: 50%;
-      box-shadow: 0 0 15px #ff3131;
-      animation: blink 1s infinite;
-    }
+.secondary-btn {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #00aaff;
+  color: #00c3ff;
+  box-shadow: 0 0 15px rgba(0,170,255,0.6);
+  width: 100%;
+  cursor: pointer;
+}
 
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.3;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    .users {
-      color: #00ff66;
-      font-weight: 700;
-    }
-
-    .join-btn {
-      margin-top: 28px;
-      width: 100%;
-      padding: 20px;
-      border: none;
-      border-radius: 22px;
-      background: linear-gradient(90deg, #ff1f1f, #25ff63);
-      color: white;
-      font-size: 28px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-
-    .join-btn:hover {
-      transform: translateY(-3px) scale(1.02);
-    }
-
-    .vip-btn {
-      margin-top: 22px;
-      width: 100%;
-      padding: 18px;
-      border-radius: 22px;
-      background: transparent;
-      border: 3px solid #00ff66;
-      color: #00ff66;
-      font-size: 28px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .vip-btn:hover {
-      background: rgba(0,255,100,0.08);
-    }
-
-    .footer {
-      margin-top: 24px;
-      color: #bfbfbf;
-      font-size: 18px;
-      font-weight: 400;
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        padding: 28px 18px;
-      }
-
-      .title {
-        font-size: 32px;
-      }
-
-      .profile-wrap {
-        width: 145px;
-        height: 145px;
-      }
-
-      .sub-title {
-        font-size: 22px;
-      }
-
-      .timer {
-        font-size: 58px;
-      }
-
-      .join-btn,
-      .vip-btn {
-        font-size: 24px;
-      }
-    }
-  </style>
+.footer {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #777;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="bg-glow"></div>
+<div class="container">
 
-  <div class="card">
-    <h1 class="title">𝐀𝐒𝐇𝐈𝐒𝐇 ~ 𝐀𝐑𝐌𝐘</h1>
+  <h1>𝐀𝐒𝐇𝐈𝐒𝐇 ~ 𝐀𝐑𝐌𝐘</h1>
 
-    <div class="profile-wrap">
-      <img
-        class="profile"
-        src="https://www.image2url.com/r2/default/images/1778927298658-10d5a548-b7c1-409f-a5a6-f214780253c0.jpg"
-        alt="Profile"
-      />
-    </div>
-
-    <h2 class="sub-title">DAILY VIP PREDICTIONS</h2>
-
-    <div class="timer" id="timer">00:27</div>
-
-    <div class="live-box">
-      <span class="dot"></span>
-      <span>LIVE •</span>
-      <span class="users">324</span>
-      <span>USERS ACTIVE</span>
-    </div>
-
-   <a href="https://t.me/+4rPpUEOQvb9jOTA9" target="_blank">
-  <button class="join-btn">🚀 JOIN NOW</button>
-</a>
-
-<a href="https://t.me/+4rPpUEOQvb9jOTA9" target="_blank">
-  <button class="vip-btn">🔥 VIP ACCESS</button>
-</a>
-    <div class="footer">Official Channel • Secure Access</div>
+  <div class="subtitle">
+    Daily Live Sureshots<br>
+    Premium Telegram Trading Signals
   </div>
 
-  <script>
-    let seconds = 27;
+  <div class="online">🔴 3438 users online now</div>
 
-    function updateTimer() {
-      const timer = document.getElementById('timer');
+  <div class="badges">
+    <div class="badge">✔️ Verified</div>
+    <div class="badge">🔥 High Accuracy</div>
+    <div class="badge">⚡️ Fast Updates</div>
+    <div class="badge">🛡 Trusted</div>
+  </div>
 
-      const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
-      const secs = String(seconds % 60).padStart(2, '0');
+ <a href="https://t.me/+4rPpUEOQvb9jOTA9" target="_blank">
+  <button class="join-btn">🚀 JOIN TELEGRAM</button>
+</a>
 
-      timer.innerText = `${mins}:${secs}`;
+  <div class="footer">
+    © 2025 - All rights reserved
+  </div>
 
-      if (seconds > 0) {
-        seconds--;
-      } else {
-        seconds = 27;
-      }
-    }
-
-    setInterval(updateTimer, 1000);
-  </script>
+</div>
 
 </body>
 </html>
